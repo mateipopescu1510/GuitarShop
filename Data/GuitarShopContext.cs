@@ -17,6 +17,11 @@ namespace GuitarShop.Data
                 .HasMany(shop => shop.Instruments)
                 .WithOne(instrument => instrument.Shop);
             
+            //One to Many Job - Employee
+            modelBuilder.Entity<Job>()
+                .HasMany(job => job.Employees)
+                .WithOne(employee => employee.Job);
+
             base.OnModelCreating(modelBuilder);
         }
     }

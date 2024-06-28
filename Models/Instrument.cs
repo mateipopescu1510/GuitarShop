@@ -1,11 +1,12 @@
 ﻿using GuitarShop.Models.Base;
+using GuitarShop.Models.Enums;
 
 namespace GuitarShop.Models
 {
     public class Instrument : BaseEntity
     {
-        public string Brand { get; set; }
-        public string Model { get; set; }
+        public InstrumentType Type { get; set; }
+        public InstrumentBrand Brand { get; set; }
         public int Price { get; set; }
 
         public Shop Shop { get; set; }
