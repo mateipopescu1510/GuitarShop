@@ -11,5 +11,9 @@ namespace GuitarShop.Models
 
         public Job Job { get; set; }
         public Guid JobId { get; set; }
+
+        public User User { get; set; }
+
+        public ICollection<Responsibility> Responsibilities { get; set; }
     }
 }

@@ -11,5 +11,7 @@ namespace GuitarShop.Models
 
         public Shop Shop { get; set; }
         public Guid ShopId { get; set; }
+
+        public ICollection<Responsibility> Responsibilities { get; set; }
     }
 }
