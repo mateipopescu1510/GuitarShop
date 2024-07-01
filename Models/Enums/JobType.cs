@@ -2,7 +2,7 @@
 {
     public enum JobType
     {
-        repair = 1,
-        instructor = 2
+        REPAIR = 1,
+        INSTRUCTOR = 2
     }
 }

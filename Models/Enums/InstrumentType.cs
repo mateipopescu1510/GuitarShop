@@ -1,11 +1,12 @@
 ﻿namespace GuitarShop.Models.Enums
 {
-    public enum InstrumentType
+    static class InstrumentType
     {
-        ELECTRIC_GUITAR = 0,
-        ELECTRIC_BASS = 1,
-        ACOUSTIC_GUITAR = 2,
-        KEYBOARD = 3,
-        DRUMS = 4,
+        public const string ELECTRIC_GUITAR = "EG";
+        public const string ELECTRIC_BASS = "EB";
+        public const string ACOUSTIC_GUITAR = "AG";
+        public const string KEYBOARD = "KB";
+        public const string DRUMS = "DR";
+        public const string OTHER = "OTHER";
     }
 }

@@ -5,8 +5,8 @@ namespace GuitarShop.Models
 {
     public class Instrument : BaseEntity
     {
-        public InstrumentType Type { get; set; }
-        public InstrumentBrand Brand { get; set; }
+        public string Type { get; set; }
+        public string Brand { get; set; }
         public int Price { get; set; }
 
         public Shop Shop { get; set; }

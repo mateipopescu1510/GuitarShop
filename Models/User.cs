@@ -1,4 +1,5 @@
 ﻿using GuitarShop.Models.Base;
+using GuitarShop.Models.Enums;
 
 namespace GuitarShop.Models
 {
@@ -11,5 +12,6 @@ namespace GuitarShop.Models
         public Employee Employee { get; set; }
         public Guid EmployeeId { get; set; }
 
+        public Role Role { get; set; } = Role.USER;
     }
 }

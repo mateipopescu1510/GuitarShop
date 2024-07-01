@@ -1,11 +1,14 @@
-﻿namespace GuitarShop.Models.Enums
+﻿using System.IO;
+
+namespace GuitarShop.Models.Enums
 {
-    public enum InstrumentBrand
+    static class InstrumentBrand
     {
-        FENDER = 0,
-        IBANEZ = 1,
-        YAMAHA = 2,
-        EPIPHONE = 3,
-        GIBSON = 4,
+        public const string FENDER = "FENDER";
+        public const string IBANEZ = "IBANEZ";
+        public const string YAMAHA = "YAMAHA";
+        public const string EPIPHONE = "EPIPHONE";
+        public const string GIBSON = "GIBSON";
+        public const string OTHER = "OTHER";
     }
 }
