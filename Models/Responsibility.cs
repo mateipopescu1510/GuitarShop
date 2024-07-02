@@ -1,6 +1,7 @@
-﻿namespace GuitarShop.Models
+﻿using GuitarShop.Models.Base;
+namespace GuitarShop.Models
 {
-    public class Responsibility
+    public class Responsibility : BaseEntity
     {
         public Employee Employee { get; set; }
         public Guid EmployeeId { get; set; }
