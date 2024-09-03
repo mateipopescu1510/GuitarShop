@@ -32,6 +32,7 @@ builder.Services.AddScoped<ShopSeeder>();
 builder.Services.AddScoped<JobSeeder>();
 builder.Services.AddScoped<InstrumentSeeder>();
 builder.Services.AddScoped<EmployeeSeeder>();
+builder.Services.AddScoped<ResponsibilitySeeder>();
 
 var app = builder.Build();
 
@@ -41,11 +42,13 @@ using (var scope = app.Services.CreateScope())
     var jobSeeder = scope.ServiceProvider.GetRequiredService<JobSeeder>();
     var instrumentSeeder = scope.ServiceProvider.GetRequiredService<InstrumentSeeder>();
     var employeeSeeder = scope.ServiceProvider.GetRequiredService<EmployeeSeeder>();
+    var responsibilitySeeder = scope.ServiceProvider.GetRequiredService<ResponsibilitySeeder>();
 
     shopSeeder.SeedInitialShops();
     jobSeeder.SeedInitialJobs();
     instrumentSeeder.SeedInitialInstruments();
     employeeSeeder.SeedInitialEmployees();
+    responsibilitySeeder.SeedInitialResponsibilities();
 }
 
 // Configure the HTTP request pipeline.

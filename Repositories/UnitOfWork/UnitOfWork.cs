@@ -4,6 +4,7 @@ using GuitarShop.Repositories.InstrumentRepository;
 using GuitarShop.Repositories.JobRepository;
 using GuitarShop.Repositories.ShopRepository;
 using GuitarShop.Repositories.UserRepository;
+using GuitarShop.Repositories.ResponsibilityRepository;
 
 
 namespace GuitarShop.Repositories.UnitOfWork
@@ -18,6 +19,7 @@ namespace GuitarShop.Repositories.UnitOfWork
             Jobs = new JobRepository.JobRepository(context);
             Users = new UserRepository.UserRepository(context);
             Shops = new ShopRepository.ShopRepository(context);
+            Responsibilities = new ResponsibilityRepository.ResponsibilityRepository(context);
         }
 
         public IEmployeeRepository Employees {  get; private set; }
@@ -25,6 +27,7 @@ namespace GuitarShop.Repositories.UnitOfWork
         public IJobRepository Jobs { get; private set; }
         public IUserRepository Users { get; private set; }
         public IShopRepository Shops { get; private set; }
+        public IResponsibilityRepository Responsibilities { get; private set; }
 
         public void Dispose()
         {

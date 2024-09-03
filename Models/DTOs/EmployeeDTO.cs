@@ -9,11 +9,13 @@
             Age = employee.Age;
             Email = employee.Email;
             JobId = employee.JobId;
+            Id = employee.Id;
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
         public string Email { get; set; }
         public Guid JobId { get; set; }
+        public Guid Id { get; set; }
     }
 }

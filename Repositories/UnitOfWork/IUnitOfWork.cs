@@ -3,6 +3,7 @@ using GuitarShop.Repositories.InstrumentRepository;
 using GuitarShop.Repositories.JobRepository;
 using GuitarShop.Repositories.ShopRepository;
 using GuitarShop.Repositories.UserRepository;
+using GuitarShop.Repositories.ResponsibilityRepository;
 
 namespace GuitarShop.Repositories.UnitOfWork
 {
@@ -13,6 +14,7 @@ namespace GuitarShop.Repositories.UnitOfWork
         IJobRepository Jobs { get; }
         IUserRepository Users { get; }
         IShopRepository Shops { get; }
+        IResponsibilityRepository Responsibilities { get; }
         int Save();
 
     }
