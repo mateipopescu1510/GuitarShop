@@ -1,4 +1,5 @@
 using GuitarShop.Data;
+using GuitarShop.Helpers.Seeders;
 using GuitarShop.Repositories.EmployeeRepository;
 using GuitarShop.Repositories.InstrumentRepository;
 using GuitarShop.Repositories.JobRepository;
@@ -27,7 +28,25 @@ builder.Services.AddScoped<IShopRepository, ShopRepository>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddScoped<ShopSeeder>();
+builder.Services.AddScoped<JobSeeder>();
+builder.Services.AddScoped<InstrumentSeeder>();
+builder.Services.AddScoped<EmployeeSeeder>();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var shopSeeder = scope.ServiceProvider.GetRequiredService<ShopSeeder>();
+    var jobSeeder = scope.ServiceProvider.GetRequiredService<JobSeeder>();
+    var instrumentSeeder = scope.ServiceProvider.GetRequiredService<InstrumentSeeder>();
+    var employeeSeeder = scope.ServiceProvider.GetRequiredService<EmployeeSeeder>();
+
+    shopSeeder.SeedInitialShops();
+    jobSeeder.SeedInitialJobs();
+    instrumentSeeder.SeedInitialInstruments();
+    employeeSeeder.SeedInitialEmployees();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
