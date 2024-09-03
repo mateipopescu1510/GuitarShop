@@ -9,8 +9,10 @@ namespace GuitarShop.Models.DTOs
         {
             JobType = job.JobType;
             Salary = job.Salary;
+            Id = job.Id;
         }
         public JobType JobType { get; set; }
         public int Salary { get; set; }
+        public Guid Id { get; set; }
     }
 }

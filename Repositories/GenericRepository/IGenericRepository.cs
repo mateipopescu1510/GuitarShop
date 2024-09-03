@@ -5,7 +5,7 @@ namespace GuitarShop.Repositories.GenericRepository
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         Task<List<TEntity>> GetAll();
-        Task<TEntity> GetById(int id);
+        Task<TEntity> GetById(Guid id);
         Task Create(TEntity entity);
         Task Update(TEntity entity);
         Task Delete(TEntity entity);

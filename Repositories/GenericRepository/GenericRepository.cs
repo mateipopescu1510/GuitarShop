@@ -17,7 +17,7 @@ namespace GuitarShop.Repositories.GenericRepository
             return await _context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntity?> GetById(int id)
+        public async Task<TEntity?> GetById(Guid id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }
